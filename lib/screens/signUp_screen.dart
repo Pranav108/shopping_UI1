@@ -1,17 +1,16 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:headphones_ui/screens/signUp_screen.dart';
+import 'package:headphones_ui/screens/signIn_screen.dart';
 
-class SignInScreen extends StatefulWidget {
-  static const String screenID = 'signIn_screen';
-  const SignInScreen({Key? key}) : super(key: key);
+class SignUpScreen extends StatefulWidget {
+  static const String screenID = 'signUp_screen';
+  const SignUpScreen({Key? key}) : super(key: key);
 
   @override
-  _SignInScreenState createState() => _SignInScreenState();
+  _SignUpScreenState createState() => _SignUpScreenState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   late String _email;
   late String _password;
   @override
@@ -122,38 +121,90 @@ class _SignInScreenState extends State<SignInScreen> {
                           ),
                         ),
                         SizedBox(
-                          height: 10,
-                        ),
-                        TextButton(
-                            style: TextButton.styleFrom(
-                              backgroundColor: Colors.transparent,
-                            ),
-                            onPressed: () {},
-                            child: Text(
-                              'Forgot password',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 20),
-                            )),
-                        SizedBox(
-                          height: 10,
+                          height: 20,
                         ),
                         Hero(
                           tag: 'done_button',
                           child: TextButton(
-                            style: TextButton.styleFrom(
-                              fixedSize: Size(double.maxFinite, 50),
-                              backgroundColor: Color(0xff0acf83),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
+                              style: TextButton.styleFrom(
+                                fixedSize: Size(double.maxFinite, 50),
+                                backgroundColor: Color(0xff0acf83),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                              ),
+                              onPressed: () {},
+                              child: Text(
+                                'Sign Up',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              )),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox.square(
+                              dimension: 40,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  padding: EdgeInsets.all(8),
+                                  primary: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                ),
+                                onPressed: () {},
+                                child: Image.asset(
+                                  "images/apple.png",
+                                  fit: BoxFit.scaleDown,
+                                ),
                               ),
                             ),
-                            onPressed: () {},
-                            child: Text(
-                              'Sign In',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 20),
+                            SizedBox(
+                              width: 20,
                             ),
-                          ),
+                            SizedBox.square(
+                              dimension: 40,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  padding: EdgeInsets.all(8),
+                                  primary: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                ),
+                                onPressed: () {},
+                                child: Image.asset(
+                                  "images/facebook.png",
+                                  fit: BoxFit.scaleDown,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            SizedBox.square(
+                              dimension: 40,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  padding: EdgeInsets.all(8),
+                                  primary: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                ),
+                                onPressed: () {},
+                                child: Image.asset(
+                                  "images/google.png",
+                                  fit: BoxFit.scaleDown,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                         SizedBox(
                           height: 20,
@@ -163,17 +214,17 @@ class _SignInScreenState extends State<SignInScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Don't have any account?",
+                              "If you have an account?",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 18),
                             ),
                             GestureDetector(
                               onTap: () {
                                 Navigator.pushNamed(
-                                    context, SignUpScreen.screenID);
+                                    context, SignInScreen.screenID);
                               },
                               child: Text(
-                                'Sign Up here',
+                                'Sign In here',
                                 style: TextStyle(
                                   color: Color(0xff0acf83),
                                   fontSize: 20,
