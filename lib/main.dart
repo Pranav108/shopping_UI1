@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:headphones_ui/screens/signIn_screen.dart';
 import 'package:headphones_ui/screens/signUp_screen.dart';
 import 'package:headphones_ui/screens/explore_screen.dart';
+import 'package:headphones_ui/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,12 +17,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: const ExploreProductsScreen(),
+      home: const HomeScreen(),
       routes: {
         SignInScreen.screenID: (context) => const SignInScreen(),
         SignUpScreen.screenID: (context) => const SignUpScreen(),
         ExploreProductsScreen.screenID: (context) =>
             const ExploreProductsScreen(),
+        HomeScreen.screenID: (context) => const HomeScreen(),
       },
     );
   }
