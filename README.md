@@ -3,7 +3,8 @@
 This app consist of UI for a simple Gadget shopping app, that I created duing `10 days of code by IITM` and projects were assigned by `Dezenix`.
 
 # screenshots
-<img src="screenshots/gadgetShopping5.png" width="180"/><img src="screenshots/gadgetShopping4.png" width="180"/><img src="screenshots/gadgetShopping3.png" width="180"/><img src="screenshots/gadgetShopping2.png" width="180"/><img src="screenshots/gadgetShopping1.png" width="180"/>
+<img src="screenshots/gadgetShopping5.png" width="230"/><img src="screenshots/gadgetShopping4.png" width="230"/>
+<img src="screenshots/gadgetShopping3.png" width="230"/><img src="screenshots/gadgetShopping2.png" width="230"/><img src="screenshots/gadgetShopping1.png" width="230"/>
 
 ## Getting Started
 
