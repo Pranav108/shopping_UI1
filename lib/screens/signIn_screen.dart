@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:headphones_ui/screens/home_screen.dart';
 import 'package:headphones_ui/screens/signUp_screen.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -147,7 +148,9 @@ class _SignInScreenState extends State<SignInScreen> {
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, HomeScreen.screenID);
+                            },
                             child: Text(
                               'Sign In',
                               style:

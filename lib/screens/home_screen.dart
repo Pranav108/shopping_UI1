@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_function_declarations_over_variables, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:headphones_ui/screens/explore_screen.dart';
+import 'package:headphones_ui/screens/search_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String screenID = 'home_screen';
@@ -61,10 +63,8 @@ class _HomeScreenState extends State<HomeScreen> {
               width: double.infinity,
               // height: 140,
               child: Column(
-                // ignore: prefer_const_literals_to_create_immutables
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   Text(
                     "Hi, Andera",
@@ -78,6 +78,33 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontSize: 30),
                   )
                 ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(16.0),
+              child: ListTile(
+                horizontalTitleGap: 8.0,
+                tileColor: Color.fromRGBO(255, 255, 255, 1),
+                leading: Icon(Icons.search),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    side: BorderSide(
+                        color: Colors.grey,
+                        width: 1.0,
+                        style: BorderStyle.solid)),
+                title: TextField(
+                  onTap: () {
+                    Navigator.pushNamed(context, SearchScreen.screenID);
+                  },
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Search headphone',
+                    hintStyle: TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
               ),
             ),
             ClipRRect(
@@ -262,14 +289,18 @@ class ItemCard extends StatelessWidget {
                     Spacer(),
                     ListTile(
                       minLeadingWidth: 0,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(
+                            context, ExploreProductsScreen.screenID);
+                      },
                       title: Text(
                         'Shop Now',
-                        style: TextStyle(fontSize: 16, color: Colors.green),
+                        style:
+                            TextStyle(fontSize: 16, color: Color(0xff0acf83)),
                       ),
                       trailing: Icon(
                         Icons.arrow_forward,
-                        color: Colors.green,
+                        color: Color(0xff0acf83),
                       ),
                     )
                   ],
