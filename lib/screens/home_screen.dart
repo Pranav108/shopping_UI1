@@ -17,19 +17,21 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
-        title: ListTile(
-          leading: Image.asset(
-            "images/img_2.png",
-            // fit: BoxFit.scaleDown,
-            scale: 1.6,
-            // scale: 4,
-            height: 50,
-            width: 50,
-          ),
-          horizontalTitleGap: 0,
-          title: Text(
-            "Audio",
-            style: TextStyle(fontWeight: FontWeight.w800, fontSize: 22),
+        title: Center(
+          child: ListTile(
+            leading: Image.asset(
+              "images/img_2.png",
+              // fit: BoxFit.scaleDown,
+              scale: 1.6,
+              // scale: 4,
+              height: 50,
+              width: 50,
+            ),
+            horizontalTitleGap: 0,
+            title: Text(
+              "Audio",
+              style: TextStyle(fontWeight: FontWeight.w800, fontSize: 22),
+            ),
           ),
         ),
         leading: IconButton(
